@@ -10,18 +10,19 @@
       <h2>Which type of message?</h2>
       <article class='box1'>
       <div class='radio'>
-        <input type='radio'class='input'>affirmation
-        <input type='radio'class='input'>mantra
+        <input type='radio'class='input'name='select' id='input2'>affirmation
+        <input type='radio'class='input'name='select' id='input1'>mantra
       </div class='msg'>
       <div class='button'>
-        <button>Receive Message</button>
+        <button id='actionButton'>Receive Message</button>
       </div>
       </article>
       <article class='box2'>
-        <img src='assets/meditate.svg'></img>
-        <p class='message'hidden>Message goes here</p>
+        <img src='assets/meditate.svg' alt='Meditation image'class='' id='meditate'>
+        <p class='message hidden' id='randomMessage'>Please select an input!</p>
       </article>
     </section>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="assets/arrays.js"></script>
   </body>
 </html>
