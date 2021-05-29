@@ -6,11 +6,13 @@
   </head>
   <body>
     <header><h1>&#10024; Self Care Center &#10024;</h1></header>
-    <section class='login-page'>
-      <input type='text'placeholder='Name'class='input-field'>
+    <section class='login-page' id='logInPage'>
+      <input type='text'placeholder='Name'class='input-field' id='inputField'>
+      <p class='error-message hidden' id='inputError'>*Name is required!
+      </p>
       <button class='log-in'id='logIn'>Log In</button>
     </section>
-    <section class='main-page hidden'>
+    <section class='main-page hidden' id='mainPage'>
       <h2>Which type of message?</h2>
       <article class='box1'>
       <div class='radio'>
