@@ -46,7 +46,28 @@ h2 {
   font-size: 18px;
 }
 
-section {
+.login-page {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 1% 0;
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input-field {
+  width: 50%;
+  align-self: center;
+}
+
+.log-in {
+  width: 30%;
+  align-self: center;
+}
+
+.main-page {
   display: flex;
   align-items: center;
   flex-direction: column;
