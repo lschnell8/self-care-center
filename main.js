@@ -3,6 +3,7 @@ var mantraSelector = document.getElementById('input1');
 var affirmationSelector = document.getElementById('input2');
 var message = document.getElementById('randomMessage');
 var receiveMsgBtn = document.getElementById('actionButton');
+var logInBtn = document.getElementById('logIn');
 var image = document.getElementById('meditate');
 
 //Event listeners
