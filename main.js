@@ -5,9 +5,14 @@ var message = document.getElementById('randomMessage');
 var receiveMsgBtn = document.getElementById('actionButton');
 var logInBtn = document.getElementById('logIn');
 var image = document.getElementById('meditate');
+var mainPage = document.getElementById('mainPage');
+var logInPg = document.getElementById('logInPage');
+var inputField = document.getElementById('inputField');
+var errorMsg = document.getElementById('inputError');
 
 //Event listeners
-receiveMsgBtn.addEventListener('click', renderMessage)
+receiveMsgBtn.addEventListener('click', renderMessage);
+logInBtn.addEventListener('click', logIn);
 
 //Functions
 function getRandomIndex(array) {
@@ -26,6 +31,28 @@ function renderMessage() {
   showMessage();
 };
 
+function logIn() {
+  if(!inputField.value) {
+    showErrorMsg();
+  } else {
+    showMainPage();
+    hideLogInPg();
+    insertGreeting();
+  }
+};
+
+function showErrorMsg() {
+  inputError.classList.remove('hidden')
+};
+
+function showMainPage() {
+  mainPage.classList.remove('hidden')
+};
+
+function hideLogInPg() {
+logInPg.classList.add('hidden')
+};
+
 function hideImage() {
   meditate.classList.add('hidden')
 };
@@ -41,3 +68,8 @@ function showMessage() {
 function hideMessage() {
   randomMessage.classList.add('hidden')
 };
+
+function insertGreeting() {
+  var greeting = `<h2>Welcome, ${inputField.value}!</h2>`
+  mainPage.insertAdjacentHTML('afterbegin', greeting)
+}
