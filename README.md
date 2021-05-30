@@ -57,7 +57,7 @@ Visit my published Self Care Center page [here](https://lschnell8.github.io/hang
   - [CSS-TRICKS](https://css-tricks.com/)
 
 ## Contributors
-  [Lindsay Schnell](https://github.com/lschnell8)
+  - [Lindsay Schnell](https://github.com/lschnell8)
 
 ## Project Specs
   - The project spec & rubric can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html).
