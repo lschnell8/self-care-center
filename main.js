@@ -1,18 +1,18 @@
 //Global variables
-var mantraSelector = document.getElementById('input1');
 var affirmationSelector = document.getElementById('input2');
+var errorMsg = document.getElementById('inputError');
+var image = document.getElementById('meditate');
+var inputField = document.getElementById('inputField');
+var logInBtn = document.getElementById('logIn');
+var logInPg = document.getElementById('logInPage');
+var mainPage = document.getElementById('mainPage');
+var mantraSelector = document.getElementById('input1');
 var message = document.getElementById('randomMessage');
 var receiveMsgBtn = document.getElementById('actionButton');
-var logInBtn = document.getElementById('logIn');
-var image = document.getElementById('meditate');
-var mainPage = document.getElementById('mainPage');
-var logInPg = document.getElementById('logInPage');
-var inputField = document.getElementById('inputField');
-var errorMsg = document.getElementById('inputError');
 
 //Event listeners
-receiveMsgBtn.addEventListener('click', renderMessage);
 logInBtn.addEventListener('click', logIn);
+receiveMsgBtn.addEventListener('click', renderMessage);
 
 //Functions
 function getRandomIndex(array) {
@@ -27,49 +27,30 @@ function renderMessage() {
   } else if(affirmationSelector.checked) {
     message.innerText = affirmation
   }
-  hideImage();
-  showMessage();
+  hide(image);
+  show(message);
 };
 
 function logIn() {
   if(!inputField.value) {
-    showErrorMsg();
+    show(errorMsg);
   } else {
-    showMainPage();
-    hideLogInPg();
+    show(mainPage);
+    hide(logInPg);
     insertGreeting();
   }
 };
 
-function showErrorMsg() {
-  inputError.classList.remove('hidden')
+//Helper functions
+function show(element) {
+  element.classList.remove('hidden')
 };
 
-function showMainPage() {
-  mainPage.classList.remove('hidden')
-};
-
-function hideLogInPg() {
-logInPg.classList.add('hidden')
-};
-
-function hideImage() {
-  meditate.classList.add('hidden')
-};
-
-function showImage() {
-  meditate.classList.remove('hidden')
-};
-
-function showMessage() {
-  randomMessage.classList.remove('hidden')
-};
-
-function hideMessage() {
-  randomMessage.classList.add('hidden')
+function hide(element) {
+  element.classList.add('hidden')
 };
 
 function insertGreeting() {
   var greeting = `<h2>Welcome, ${inputField.value}!</h2>`
   mainPage.insertAdjacentHTML('afterbegin', greeting)
-}
+};

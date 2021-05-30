@@ -50,8 +50,9 @@ h2 {
   border-radius: 7px;
   padding: 1% 0;
   width: 60%;
-  margin-left: 20%;
+  margin: 15% 20%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
 }
@@ -91,6 +92,7 @@ article {
   display: flex;
   flex-direction: column;
   align-self: center;
+  flex-wrap: wrap;
 }
 
 .radio {
@@ -101,8 +103,13 @@ article {
   padding-right: 5%;
 }
 
-.input {
-  margin-left: 25%;
+.affirmation {
+  margin-left: 20%;
+  margin-right: 2%;
+}
+
+.mantra {
+  margin-left: 30%;
   margin-right: 2%;
 }
 
